@@ -114,14 +114,78 @@
         <h2>Confirmed Speakers</h2>
         <p class="section-lede">Invited speaker names, affiliations, and talk titles can be added here as confirmations are finalized.</p>
       </div>
-      <div class="speaker-placeholder-grid">
-        <article class="speaker-placeholder"><span>Speaker</span><strong> <a class="button ghost" href="https://www.atilim.edu.tr/en/home/page/5812/president">Serkan Eryılmaz</a<</strong><small>ATILIM UNIVERSITY · Title </small></article>
-        <article class="speaker-placeholder"><span>Speaker</span><strong> <a class="button ghost" href="https://www.ozyegin.edu.tr/tr/akademik-kadro/mehmetoz">Mehmet Öz</a<</strong><small>ÖZYEĞİN UNIVERSITY · Title </small></article>
-        <article class="speaker-placeholder"><span>Speaker</span><strong> <a class="button ghost" href="https://www.ozyegin.edu.tr/tr/akademik-kadro/emrahahi">Emrah Ahi</a<</strong><small>ÖZYEĞİN UNIVERSITY · Title </small></article>
-        <article class="speaker-placeholder"><span>Speaker</span><strong> <a class="button ghost" href="https://science.ku.edu.tr/en/staff/faculty-members/?detail=true&id=mcaglar">Mine Çağlar</a<</strong><small>KOÇ UNIVERSITY · Title </small></article>
-        <article class="speaker-placeholder"><span>Speaker</span><strong> <a class="button ghost" href="https://akademi.itu.edu.tr/cyaran/">Umut Yaran</a<</strong><small> ISTANBUL TECHNICAL UNIVERSITY · Title </small></article>
-        <article class="speaker-placeholder"><span>Speaker</span><strong> <a class="button ghost" href="https://sites.google.com/view/demirberkunlu?pli=1&authuser=0">Demirberk Ünlü</a<</strong><small> ATILIM UNIVERSITY · Title</small></article>
-      </div>
+     <div class="speaker-placeholder-grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  align-items: stretch;
+}">
+  <article class="speaker-placeholder">
+    <a class="speaker-card-link"
+       href="https://www.atilim.edu.tr/en/home/page/5812/president"
+       target="_blank"
+       rel="noopener noreferrer">
+      <span class="speaker-label">Speaker</span>
+      <strong>Serkan Eryılmaz</strong>
+      <small>ATILIM UNIVERSITY · Title</small>
+    </a>
+  </article>
+
+  <article class="speaker-placeholder">
+    <a class="speaker-card-link"
+       href="https://www.ozyegin.edu.tr/tr/akademik-kadro/mehmetoz"
+       target="_blank"
+       rel="noopener noreferrer">
+      <span class="speaker-label">Speaker</span>
+      <strong>Mehmet Öz</strong>
+      <small>ÖZYEĞİN UNIVERSITY · Title</small>
+    </a>
+  </article>
+
+  <article class="speaker-placeholder">
+    <a class="speaker-card-link"
+       href="https://www.ozyegin.edu.tr/tr/akademik-kadro/emrahahi"
+       target="_blank"
+       rel="noopener noreferrer">
+      <span class="speaker-label">Speaker</span>
+      <strong>Emrah Ahi</strong>
+      <small>ÖZYEĞİN UNIVERSITY · Title</small>
+    </a>
+  </article>
+
+  <article class="speaker-placeholder">
+    <a class="speaker-card-link"
+       href="https://science.ku.edu.tr/en/staff/faculty-members/?detail=true&amp;id=mcaglar"
+       target="_blank"
+       rel="noopener noreferrer">
+      <span class="speaker-label">Speaker</span>
+      <strong>Mine Çağlar</strong>
+      <small>KOÇ UNIVERSITY · Title</small>
+    </a>
+  </article>
+
+  <article class="speaker-placeholder">
+    <a class="speaker-card-link"
+       href="https://akademi.itu.edu.tr/cyaran/"
+       target="_blank"
+       rel="noopener noreferrer">
+      <span class="speaker-label">Speaker</span>
+      <strong>Umut Yaran</strong>
+      <small>ISTANBUL TECHNICAL UNIVERSITY · Title</small>
+    </a>
+  </article>
+
+  <article class="speaker-placeholder">
+    <a class="speaker-card-link"
+       href="https://sites.google.com/view/demirberkunlu?pli=1&amp;authuser=0"
+       target="_blank"
+       rel="noopener noreferrer">
+      <span class="speaker-label">Speaker</span>
+      <strong>Demirberk Ünlü</strong>
+      <small>ATILIM UNIVERSITY · Title</small>
+    </a>
+  </article>
+</div>
     </section>
 
     <!-- EDIT HERE: PROGRAM -->
