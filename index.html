@@ -200,6 +200,115 @@
     }
 
 
+    /* Compact registration call-to-action */
+    .registration-cta {
+      margin: 1.75rem auto 0;
+      padding: 1.1rem 1.25rem;
+      max-width: 720px;
+      text-align: center;
+      border: 1px solid rgba(11,47,87,.10);
+      border-radius: 14px;
+      background: rgba(11,47,87,.035);
+    }
+
+    .registration-cta p {
+      margin: 0 0 .8rem;
+      font-size: .95rem;
+      opacity: .8;
+    }
+
+    .registration-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 150px;
+      padding: .72rem 1.1rem;
+      border-radius: 10px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    /* Compact venue */
+    .venue-compact {
+      padding-top: 2.75rem;
+      padding-bottom: 2.75rem;
+    }
+
+    .venue-compact-card {
+      display: flex;
+      align-items: center;
+      gap: 1.15rem;
+      max-width: 760px;
+      padding: 1rem 1.15rem;
+      border: 1px solid rgba(11,47,87,.10);
+      border-radius: 14px;
+      background: rgba(11,47,87,.03);
+    }
+
+    .venue-compact-logo {
+      flex: 0 0 auto;
+      width: 115px;
+      max-height: 54px;
+      object-fit: contain;
+    }
+
+    .venue-compact-copy h2 {
+      margin: 0 0 .25rem;
+      font-size: 1.35rem;
+    }
+
+    .venue-compact-copy p {
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .venue-compact-copy .venue-name {
+      margin-bottom: .18rem;
+      font-weight: 700;
+    }
+
+    /* Simpler organizing committee */
+    .organizer-simple-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .organizer-simple-item {
+      padding: .95rem 1rem;
+      text-align: center;
+      border-top: 1px solid rgba(11,47,87,.12);
+      border-bottom: 1px solid rgba(11,47,87,.12);
+    }
+
+    .organizer-simple-item h4 {
+      margin: 0 0 .25rem;
+      font-size: 1.05rem;
+    }
+
+    .organizer-simple-item p {
+      margin: 0;
+      font-size: .9rem;
+      opacity: .72;
+    }
+
+    @media (max-width: 620px) {
+      .venue-compact-card {
+        align-items: flex-start;
+      }
+
+      .venue-compact-logo {
+        width: 90px;
+      }
+
+      .organizer-simple-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+
   </style>
 </head>
 <body>
@@ -272,7 +381,6 @@
     <!-- EDIT HERE: SPEAKERS -->
     <section class="section" id="speakers">
       <div class="section-heading">
-        <p class="kicker">Invited Speakers</p>
         <h2>Confirmed Speakers</h2>
         </div>
       <div class="speaker-placeholder-grid">
@@ -307,6 +415,11 @@
           </a>
         </article>
       </div>
+      <div class="registration-cta">
+        <p>Registration form: name, surname, email address, and talk title (if applicable).</p>
+        <!-- Replace the URL below with the published Google Form link. -->
+        <a class="button primary registration-button" href="https://docs.google.com/forms/" target="_blank" rel="noopener noreferrer">Registration</a>
+      </div>
     </section>
 
     <!-- EDIT HERE: PROGRAM -->
@@ -338,25 +451,16 @@
     </section>
 
     <!-- EDIT HERE: VENUE -->
-    <section class="section" id="venue">
-      <div class="section-heading venue-heading-lockup">
-        <div>
-          <p class="kicker">Venue</p>
-          <h2>Middle East Technical University</h2>
-        </div>
-        <img class="venue-metu-logo" src="metu-logo-user.png" alt="ODTÜ / METU logo" />
+    <section class="section venue-compact" id="venue">
+      <div class="section-heading">
+        <p class="kicker">Venue</p>
       </div>
-      <div class="venue-grid">
-        <div>
+      <div class="venue-compact-card">
+        <img class="venue-compact-logo" src="metu-logo-user.png" alt="ODTÜ / METU logo" />
+        <div class="venue-compact-copy">
+          <h2>Middle East Technical University</h2>
           <p class="venue-name">Institute of Applied Mathematics</p>
-          <p>Middle East Technical University (METU)<br />Ankara, Türkiye</p>
-          <p>Practical information on rooms, campus access, accommodation, and local transportation can be added here as arrangements are finalized.</p>
-        </div>
-        <div class="venue-badge">
-          <img class="venue-badge-logo" src="metu-logo-user.png" alt="ODTÜ / METU logo" />
-          <strong>METU</strong>
-          <span>Institute of Applied Mathematics</span>
-          <small>Ankara · Türkiye</small>
+          <p>Ankara, Türkiye</p>
         </div>
       </div>
     </section>
@@ -367,17 +471,15 @@
         <p class="kicker">Organizing Committee</p>
         <h3>Workshop organizers</h3>
       </div>
-      <div class="organizer-grid">
-        <article class="organizer-card">
-          <div class="initials">CVA</div>
+      <div class="organizer-simple-list">
+        <div class="organizer-simple-item">
           <h4>Ceren Vardar Acar</h4>
           <p>Middle East Technical University</p>
-        </article>
-        <article class="organizer-card">
-          <div class="initials">MÇ</div>
+        </div>
+        <div class="organizer-simple-item">
           <h4>Mine Çağlar</h4>
-          <p>Organizing Committee</p>
-        </article>
+          <p>Koç University</p>
+        </div>
       </div>
     </section>
 
