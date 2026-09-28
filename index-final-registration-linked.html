@@ -1,0 +1,689 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="6th Ankara-Istanbul Workshop on Stochastic Processes, 16–17 October 2026, Institute of Applied Mathematics, Middle East Technical University, Ankara, Türkiye." />
+  <meta name="theme-color" content="#0b2f57" />
+  <meta property="og:title" content="6th Ankara-Istanbul Workshop on Stochastic Processes" />
+  <meta property="og:description" content="16–17 October 2026 · Institute of Applied Mathematics · Middle East Technical University · Ankara, Türkiye" />
+  <meta property="og:image" content="workshop-poster.png" />
+  <title>6th Ankara-Istanbul Workshop on Stochastic Processes | 16–17 October 2026</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* Invited speakers: compact, equal-size clickable cards */
+    .speaker-placeholder-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.25rem;
+      align-items: stretch;
+    }
+
+    .speaker-placeholder {
+      min-width: 0;
+      min-height: 150px;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .speaker-card-link {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: .55rem;
+      height: 100%;
+      min-height: 150px;
+      padding: 1.25rem;
+      box-sizing: border-box;
+      color: inherit;
+      text-decoration: none;
+      border-radius: inherit;
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+
+    .speaker-card-link:hover,
+    .speaker-card-link:focus-visible {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(11, 47, 87, .12);
+      outline: none;
+    }
+
+    .speaker-card-link .speaker-label {
+      display: block;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      opacity: .65;
+    }
+
+    .speaker-card-link strong {
+      display: block;
+      font-size: 1.15rem;
+      line-height: 1.25;
+      overflow-wrap: anywhere;
+    }
+
+    .speaker-card-link small {
+      display: block;
+      line-height: 1.45;
+      opacity: .78;
+    }
+
+    @media (max-width: 850px) {
+      .speaker-placeholder-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 560px) {
+      .speaker-placeholder-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+      /* TÜBİTAK support lockup */
+    .support-strip {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .support-brand {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
+      width: 118px;
+      min-height: 118px;
+      padding: 14px;
+      margin-left: 1.5rem;
+      background: rgba(255,255,255,.96);
+      border: 1px solid rgba(255,255,255,.55);
+      border-radius: 18px;
+      box-shadow: 0 12px 30px rgba(0,0,0,.12);
+      box-sizing: border-box;
+    }
+
+    .support-brand img {
+      display: block;
+      width: 72px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    @media (max-width: 760px) {
+      .support-strip {
+        gap: 1.25rem;
+      }
+
+      .support-brand {
+        width: 100px;
+        min-height: 100px;
+        margin-left: 0;
+      }
+
+      .support-brand img {
+        width: 62px;
+      }
+    }
+  /* ODTÜ / METU branding */
+    .site-header {
+      position: relative;
+    }
+
+    .nav-shell {
+      padding-right: 112px;
+      box-sizing: border-box;
+    }
+
+    .metu-corner-brand {
+      position: absolute;
+      top: 50%;
+      right: 1.25rem;
+      transform: translateY(-50%);
+      z-index: 30;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 128px;
+      height: 48px;
+      padding: 5px 8px;
+      background: rgba(255,255,255,.97);
+      border: 1px solid rgba(11,47,87,.10);
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0,0,0,.08);
+      box-sizing: border-box;
+    }
+
+    .metu-corner-brand img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .venue-heading-lockup {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .venue-metu-logo {
+      display: block;
+      flex: 0 0 auto;
+      width: min(300px, 42vw);
+      max-height: 84px;
+      object-fit: contain;
+    }
+
+    @media (max-width: 760px) {
+      .nav-shell {
+        padding-right: 82px;
+      }
+
+      .metu-corner-brand {
+        right: .75rem;
+        width: 104px;
+        height: 40px;
+      }
+
+      .venue-heading-lockup {
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      .venue-metu-logo {
+        width: 180px;
+        max-height: 56px;
+      }
+    }
+
+
+    /* Compact registration call-to-action */
+    .registration-cta {
+      margin: 1.75rem auto 0;
+      padding: 1.1rem 1.25rem;
+      max-width: 720px;
+      text-align: center;
+      border: 1px solid rgba(11,47,87,.10);
+      border-radius: 14px;
+      background: rgba(11,47,87,.035);
+    }
+
+    .registration-cta p {
+      margin: 0 0 .8rem;
+      font-size: .95rem;
+      opacity: .8;
+    }
+
+    .registration-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 150px;
+      padding: .72rem 1.1rem;
+      border-radius: 10px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    /* Compact venue */
+    .venue-compact {
+      padding-top: 2.75rem;
+      padding-bottom: 2.75rem;
+    }
+
+    .venue-compact-card {
+      display: flex;
+      align-items: center;
+      gap: 1.15rem;
+      max-width: 760px;
+      padding: 1rem 1.15rem;
+      border: 1px solid rgba(11,47,87,.10);
+      border-radius: 14px;
+      background: rgba(11,47,87,.03);
+    }
+
+    .venue-compact-logo {
+      flex: 0 0 auto;
+      width: 115px;
+      max-height: 54px;
+      object-fit: contain;
+    }
+
+    .venue-compact-copy h2 {
+      margin: 0 0 .25rem;
+      font-size: 1.35rem;
+    }
+
+    .venue-compact-copy p {
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .venue-compact-copy .venue-name {
+      margin-bottom: .18rem;
+      font-weight: 700;
+    }
+
+    /* Simpler organizing committee */
+    .organizer-simple-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .organizer-simple-item {
+      padding: .95rem 1rem;
+      text-align: center;
+      border-top: 1px solid rgba(11,47,87,.12);
+      border-bottom: 1px solid rgba(11,47,87,.12);
+    }
+
+    .organizer-simple-item h4 {
+      margin: 0 0 .25rem;
+      font-size: 1.05rem;
+    }
+
+    .organizer-simple-item p {
+      margin: 0;
+      font-size: .9rem;
+      opacity: .72;
+    }
+
+    @media (max-width: 620px) {
+      .venue-compact-card {
+        align-items: flex-start;
+      }
+
+      .venue-compact-logo {
+        width: 90px;
+      }
+
+      .organizer-simple-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+
+    /* Compact page rhythm */
+    #about { padding-bottom: .55rem !important; }
+    #speakers { padding-top: .55rem !important; }
+    #about .section-heading { margin-bottom: .7rem !important; }
+    #speakers .section-heading { margin-bottom: .7rem !important; }
+
+    .compact-pair-section {
+      padding-top: 1.35rem !important;
+      padding-bottom: 1.35rem !important;
+    }
+    .compact-pair-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+    .compact-info-card {
+      padding: 1rem 1.1rem;
+      border: 1px solid rgba(11,47,87,.10);
+      border-radius: 12px;
+      background: rgba(11,47,87,.025);
+    }
+    .compact-info-card .kicker { margin: 0 0 .55rem; }
+    .compact-card-row { display:flex; align-items:center; gap:.8rem; }
+    .compact-venue-logo { width: 92px; max-height: 44px; object-fit: contain; flex: 0 0 auto; }
+    .compact-info-card h3 { margin:0 0 .25rem; font-size:1.05rem; }
+    .compact-info-card h4 { margin:0 0 .12rem; font-size:.98rem; }
+    .compact-info-card p { margin:0; font-size:.88rem; line-height:1.4; }
+    .compact-strong { font-weight:700; }
+    .compact-organizer-list { display:grid; gap:.65rem; }
+    .compact-organizer-list > div + div { padding-top:.6rem; border-top:1px solid rgba(11,47,87,.10); }
+
+    /* Smaller support strip */
+    .support-strip {
+      padding: 1.15rem 1.35rem !important;
+      gap: 1rem !important;
+      border-radius: 14px;
+      margin-top: .5rem !important;
+      margin-bottom: .5rem !important;
+    }
+    .support-strip h2 { margin: .15rem 0 0; font-size: 1.25rem !important; }
+    .support-strip p { margin: 0 !important; font-size: .88rem; line-height: 1.45; }
+    .support-strip .support-brand {
+      width: 82px !important;
+      min-height: 72px !important;
+      padding: 9px !important;
+      margin-left: .5rem !important;
+      border-radius: 12px !important;
+      box-shadow: none !important;
+    }
+    .support-strip .support-brand img { width: 52px !important; }
+
+    /* Smaller contact / question block */
+    #contact { padding-top: 1rem !important; padding-bottom: 1.2rem !important; }
+    .contact-box {
+      padding: 1rem 1.1rem !important;
+      gap: 1rem !important;
+      border-radius: 12px !important;
+    }
+    .contact-box .kicker { margin-bottom: .25rem !important; }
+    .contact-box h2 { margin: 0 0 .25rem !important; font-size: 1.3rem !important; }
+    .contact-box p { margin: 0 !important; font-size: .88rem; line-height: 1.4; }
+    .contact-actions { gap: .45rem !important; }
+    .contact-actions .button { padding: .65rem .9rem !important; }
+
+    /* Reduce vertical gaps between major sections */
+    main > .section { margin-top: 0 !important; margin-bottom: 0 !important; }
+
+    @media (max-width: 700px) {
+      .compact-pair-grid { grid-template-columns: 1fr; }
+      .support-strip { padding: 1rem !important; }
+      .compact-card-row { align-items:flex-start; }
+    }
+
+
+  
+    /* Red registration button */
+    .registration-red {
+      background: #c62828;
+      color: #fff;
+      border-color: #c62828;
+      box-shadow: 0 8px 18px rgba(198,40,40,.18);
+    }
+
+    .registration-red:hover,
+    .registration-red:focus-visible {
+      background: #a91f1f;
+      border-color: #a91f1f;
+      color: #fff;
+    }
+
+    /* Scientific program: compact timetable */
+    .program-grid {
+      align-items: stretch;
+      gap: 1.15rem;
+    }
+
+    .program-day {
+      overflow: hidden;
+    }
+
+    .program-day .day-date {
+      margin-bottom: .7rem;
+    }
+
+    .schedule-list {
+      display: grid;
+      gap: 0;
+      margin-top: .45rem;
+      border-top: 1px solid rgba(11,47,87,.10);
+    }
+
+    .schedule-row {
+      display: grid;
+      grid-template-columns: 92px minmax(0,1fr);
+      gap: .8rem;
+      align-items: start;
+      padding: .62rem 0;
+      border-bottom: 1px solid rgba(11,47,87,.08);
+    }
+
+    .schedule-time {
+      font-size: .82rem;
+      font-weight: 700;
+      color: #0b2f57;
+      white-space: nowrap;
+    }
+
+    .schedule-event {
+      font-size: .92rem;
+      line-height: 1.35;
+    }
+
+    .schedule-event.break {
+      opacity: .72;
+      font-style: italic;
+    }
+
+    @media (max-width: 560px) {
+      .schedule-row {
+        grid-template-columns: 82px minmax(0,1fr);
+        gap: .65rem;
+      }
+    }
+
+  
+    /* Keep the two Scientific Program days side by side on desktop */
+    #program .program-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      align-items: start;
+    }
+
+    @media (max-width: 820px) {
+      #program .program-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <a class="metu-corner-brand" href="https://www.metu.edu.tr/" target="_blank" rel="noopener noreferrer" aria-label="Middle East Technical University website">
+      <img src="metu-logo-user.png" alt="ODTÜ / METU logo" />
+    </a>
+    <div class="nav-shell">
+     <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
+      <nav class="main-nav" id="main-nav" aria-label="Workshop navigation">
+        <a href="#about">About</a>
+        <a href="#format">Format</a>
+        <a href="#speakers">Speakers</a>
+        <a href="#program">Program</a>
+        <a href="#venue">Venue</a>
+        <a href="#organizers">Organizers</a>
+        <a href="#contact">Contact</a>
+        <a class="personal-link" href="https://cvardar.github.io/cerenvardaracar/">Academic home ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="hero-logo-card">
+        <img src="workshop-poster.png" alt="6th Ankara-Istanbul Workshop on Stochastic Processes, 16–17 October 2026, ODTÜ Uygulamalı Matematik Enstitüsü, Ankara" />
+      </div>
+      <div class="hero-copy">
+        <p class="eyebrow">16–17 October 2026 · Ankara, Türkiye</p>
+        <h2>6th Ankara-Istanbul Workshop on Stochastic Processes</h2>
+        <p class="hero-place">Institute of Applied Mathematics<br />Middle East Technical University (METU)</p>
+        <p class="hero-intro">A two-day scientific meeting for researchers working in stochastic processes and their applications, with research talks, open-problem discussions, and time for new collaborations. </p>
+        <div class="hero-actions">
+          <a class="button registration-red" href="https://docs.google.com/forms/d/e/1FAIpQLSf0Z26vwccdhYBXrW1j71tGPqrQfpAmiBdXq3L9Vgi_oqJ-HA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">Registration</a>
+          <a class="button primary" href="#about">Explore the workshop</a>
+          <button class="button secondary" id="calendar-button" type="button">Add to calendar</button>
+        </div>
+        <div class="countdown" aria-live="polite">
+          <strong id="countdown-days">—</strong>
+          <span id="countdown-label">days until the workshop</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="facts" aria-label="Key workshop facts">
+      <article><span>Date</span><strong>16–17 October 2026</strong></article>
+      <article><span>Venue</span><strong>Institute of Applied Mathematics, METU</strong></article>
+      <article><span>City</span><strong>Ankara, Türkiye</strong></article>
+      <article><span>Focus</span><strong>Stochastic processes & applications</strong></article>
+    </section>
+
+    <!-- EDIT HERE: ABOUT -->
+    <section class="section" id="about">
+      <div class="section-heading">
+        <p class="kicker">About</p>
+        <h2>Ideas, open problems, and collaboration</h2>
+      </div>
+      <div class="about-grid">
+        <div class="lead-copy">
+          <p>The workshop will bring together leading researchers and scholars working in stochastic processes and their applications. Its aim is to present recent advances, exchange ideas, discuss current research challenges, and foster new scientific collaborations.</p>
+          <p>The meeting is intentionally designed to combine formal research presentations with informal mathematical interaction, giving participants time to discuss open problems and explore potential solutions together.</p>
+        </div>
+        <aside class="highlight-card">
+          <span class="card-label">Workshop spirit</span>
+          <p>Research talks in the mornings and afternoons, followed by friendly and productive desk-and-board sessions centered on open problems, brainstorming, and potential collaborations.</p>
+        </aside>
+      </div>
+    </section>
+    <!-- EDIT HERE: SPEAKERS -->
+    <section class="section" id="speakers">
+      <div class="section-heading">
+        <h2>Confirmed Speakers</h2>
+        </div>
+      <div class="speaker-placeholder-grid">
+        <article class="speaker-placeholder">
+          <a class="speaker-card-link" href="https://www.atilim.edu.tr/en/home/page/5812/president" target="_blank" rel="noopener noreferrer">
+            <span class="speaker-label">Speaker</span><strong>Serkan Eryılmaz</strong><small>ATILIM UNIVERSITY </small>
+          </a>
+        </article>
+        <article class="speaker-placeholder">
+          <a class="speaker-card-link" href="https://www.ozyegin.edu.tr/tr/akademik-kadro/mehmetoz" target="_blank" rel="noopener noreferrer">
+            <span class="speaker-label">Speaker</span><strong>Mehmet Öz</strong><small>ÖZYEĞİN UNIVERSITY </small>
+          </a>
+        </article>
+        <article class="speaker-placeholder">
+          <a class="speaker-card-link" href="https://www.ozyegin.edu.tr/tr/akademik-kadro/emrahahi" target="_blank" rel="noopener noreferrer">
+            <span class="speaker-label">Speaker</span><strong>Emrah Ahi</strong><small>ÖZYEĞİN UNIVERSITY </small>
+          </a>
+        </article>
+        <article class="speaker-placeholder">
+          <a class="speaker-card-link" href="https://science.ku.edu.tr/en/staff/faculty-members/?detail=true&amp;id=mcaglar" target="_blank" rel="noopener noreferrer">
+            <span class="speaker-label">Speaker</span><strong>Mine Çağlar</strong><small>KOÇ UNIVERSITY </small>
+          </a>
+        </article>
+        <article class="speaker-placeholder">
+          <a class="speaker-card-link" href="https://akademi.itu.edu.tr/cyaran/" target="_blank" rel="noopener noreferrer">
+            <span class="speaker-label">Speaker</span><strong>Umut Yaran</strong><small>ISTANBUL TECHNICAL UNIVERSITY </small>
+          </a>
+        </article>
+        <article class="speaker-placeholder">
+          <a class="speaker-card-link" href="https://sites.google.com/view/demirberkunlu?pli=1&amp;authuser=0" target="_blank" rel="noopener noreferrer">
+            <span class="speaker-label">Speaker</span><strong>Demirberk Ünlü</strong><small>ATILIM UNIVERSITY </small>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <!-- EDIT HERE: PROGRAM -->
+    <section class="section alt" id="program">
+      <div class="section-heading centered">
+        <p class="kicker">Program</p>
+        <h2>Scientific program</h2>
+      </div>
+
+      <div class="program-grid">
+        <article class="day-card program-day">
+          <div class="day-date">Friday · 16 October</div>
+          <div class="schedule-list">
+            <div class="schedule-row"><span class="schedule-time">9:00–9:20</span><span class="schedule-event">Registration</span></div>
+            <div class="schedule-row"><span class="schedule-time">9:20–9:30</span><span class="schedule-event">Opening Remarks</span></div>
+            <div class="schedule-row"><span class="schedule-time">9:30–10:30</span><span class="schedule-event">Serkan Eryılmaz</span></div>
+            <div class="schedule-row"><span class="schedule-time">10:30–11:00</span><span class="schedule-event break">Coffee Break</span></div>
+            <div class="schedule-row"><span class="schedule-time">11:00–12:00</span><span class="schedule-event">Mehmet Öz</span></div>
+            <div class="schedule-row"><span class="schedule-time">12:00–13:30</span><span class="schedule-event break">Lunch</span></div>
+            <div class="schedule-row"><span class="schedule-time">13:30–14:30</span><span class="schedule-event">Emrah Ahi</span></div>
+            <div class="schedule-row"><span class="schedule-time">14:30–15:00</span><span class="schedule-event break">Coffee Break</span></div>
+            <div class="schedule-row"><span class="schedule-time">15:00–16:30</span><span class="schedule-event">Brief Presentations and Discussion</span></div>
+          </div>
+        </article>
+
+        <article class="day-card program-day">
+          <div class="day-date">Saturday · 17 October</div>
+          <div class="schedule-list">
+            <div class="schedule-row"><span class="schedule-time">9:20–9:30</span><span class="schedule-event">Registration</span></div>
+            <div class="schedule-row"><span class="schedule-time">9:30–10:30</span><span class="schedule-event">Mine Çağlar</span></div>
+            <div class="schedule-row"><span class="schedule-time">10:30–11:00</span><span class="schedule-event break">Coffee Break</span></div>
+            <div class="schedule-row"><span class="schedule-time">11:00–12:00</span><span class="schedule-event">Umut Yaran</span></div>
+            <div class="schedule-row"><span class="schedule-time">12:00–13:30</span><span class="schedule-event break">Lunch</span></div>
+            <div class="schedule-row"><span class="schedule-time">13:30–14:30</span><span class="schedule-event">Demirberk Ünlü</span></div>
+            <div class="schedule-row"><span class="schedule-time">14:30–15:00</span><span class="schedule-event break">Coffee Break</span></div>
+            <div class="schedule-row"><span class="schedule-time">15:00–16:30</span><span class="schedule-event">Brief Presentations and Discussion</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- EDIT HERE: VENUE + ORGANIZERS -->
+    <section class="section compact-pair-section">
+      <div class="compact-pair-grid">
+        <div class="compact-info-card" id="venue">
+          <p class="kicker">Venue</p>
+          <div class="compact-card-row">
+            <img class="compact-venue-logo" src="metu-logo-user.png" alt="ODTÜ / METU logo" />
+            <div>
+              <h3>Middle East Technical University</h3>
+              <p class="compact-strong">Institute of Applied Mathematics</p>
+              <p>Ankara, Türkiye</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="compact-info-card" id="organizers">
+          <p class="kicker">Organizing Committee</p>
+          <div class="compact-organizer-list">
+            <div>
+              <h4>Ceren Vardar Acar</h4>
+              <p>Middle East Technical University</p>
+            </div>
+            <div>
+              <h4>Mine Çağlar</h4>
+              <p>Koç University</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDIT HERE: INVITED SPEAKER SUPPORT -->
+    <section class="support-strip">
+      <div>
+        <p class="kicker light">For invited speakers</p>
+        <h2>Travel and accommodation support</h2>
+      </div>
+      <p>The workshop is supported by Tubitak 1001 No: 124F094 and Tubitak 1001 No: 124F343 and will cover accommodation and/or travel expenses for invited speakers in accordance with the organizational arrangements. Specific details will be communicated directly to participants. </p>
+     <a class="support-brand" href="https://www.tubitak.gov.tr/" target="_blank" rel="noopener noreferrer" aria-label="TÜBİTAK website">
+        <img src="data:image/png;base64,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" alt="TÜBİTAK logo" />
+      </a>
+    </section>
+
+    <!-- EDIT HERE: CONTACT -->
+    <section class="section" id="contact">
+      <div class="contact-box">
+        <div>
+          <p class="kicker">Contact</p>
+          <h2>Questions about the workshop?</h2>
+          <p>For scientific program and practical arrangements, please contact the organizing committee.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="button primary" href="mailto:cvardar@metu.edu.tr?subject=6th%20Ankara-Istanbul%20Workshop%20on%20Stochastic%20Processes">Email Ceren Vardar Acar</a>
+          <a class="text-link" href="../">Return to academic homepage →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <img src="workshop-poster.png" alt="" aria-hidden="true" />
+    <div>
+      <strong>6th Ankara-Istanbul Workshop on Stochastic Processes</strong>
+      <span>16–17 October 2026 · METU · Ankara, Türkiye</span>
+    </div>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
