@@ -126,6 +126,79 @@
         width: 62px;
       }
     }
+    /* ODTÜ / METU branding */
+    .site-header {
+      position: relative;
+    }
+
+    .nav-shell {
+      padding-right: 112px;
+      box-sizing: border-box;
+    }
+
+    .metu-corner-brand {
+      position: absolute;
+      top: 50%;
+      right: 1.25rem;
+      transform: translateY(-50%);
+      z-index: 30;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 72px;
+      height: 48px;
+      padding: 5px 8px;
+      background: rgba(255,255,255,.97);
+      border: 1px solid rgba(11,47,87,.10);
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0,0,0,.08);
+      box-sizing: border-box;
+    }
+
+    .metu-corner-brand img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .venue-heading-lockup {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .venue-metu-logo {
+      display: block;
+      flex: 0 0 auto;
+      width: min(190px, 28vw);
+      max-height: 88px;
+      object-fit: contain;
+    }
+
+    @media (max-width: 760px) {
+      .nav-shell {
+        padding-right: 82px;
+      }
+
+      .metu-corner-brand {
+        right: .75rem;
+        width: 60px;
+        height: 42px;
+      }
+
+      .venue-heading-lockup {
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      .venue-metu-logo {
+        width: 115px;
+        max-height: 64px;
+      }
+    }
+
   </style>
 </head>
 <body>
